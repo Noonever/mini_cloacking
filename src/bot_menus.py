@@ -1,5 +1,5 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, CallbackQuery
-from src.config import SITE_URL
+from config import SITE_URL
 
 MENU_STEP = 5
 
