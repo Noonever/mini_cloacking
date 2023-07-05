@@ -1,0 +1,3 @@
+BOT_TOKEN = "5845722259:AAGrcS4yub-QdDEa6RLerHdiadvBtyBSFnA"
+ACCESSED_UIDS = ["559106893"]
+SITE_URL = 'http://tgfull.ua'
