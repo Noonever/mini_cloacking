@@ -13,7 +13,7 @@ def startup_message():
     
 app = FastAPI(on_startup=[startup_message])
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="../templates")
 
 
 def get_client_ip(request: Request) -> str:
@@ -30,6 +30,11 @@ def validate_iso(iso: str):
 
 def error_page(request: Request):
     return templates.TemplateResponse('error.html', {"request": request})
+
+
+@app.get("/")
+async def nothing(request: Request):
+    return error_page(request=request)
 
 
 @app.get("/{code}")
