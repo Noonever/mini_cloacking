@@ -42,6 +42,8 @@ async def root(code: str, request: Request):
     client_ip = get_client_ip(request=request)
     try:
         iso_code = get_country_iso(ip=client_ip)
+        if not validate_iso(iso=iso_code):
+            return error_page(request=request)
     except:
         return error_page(request=request)
     
