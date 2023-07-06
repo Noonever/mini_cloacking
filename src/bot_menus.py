@@ -10,7 +10,7 @@ TRAFFERS_MENU_TEXT = "Список траферів"
 
 async def show_admin_menu(message: Message | None = None, callback: CallbackQuery | None = None):
     link_button = InlineKeyboardButton(text='?', callback_data='slava')
-    traffers_button = InlineKeyboardButton(text='Трафери', callback_data='show_traffers:0:5')
+    traffers_button = InlineKeyboardButton(text='👥Трафери', callback_data='show_traffers:0:5')
     ikb = InlineKeyboardMarkup()
     ikb.add(link_button).add(traffers_button)
     if message:
@@ -76,7 +76,7 @@ def get_traffers_keyboard(
         ikb.add(previous_button, next_button)
             
     back_button = InlineKeyboardButton(text="Назад", callback_data="admin_menu")
-    add_button = InlineKeyboardButton(text='👥Додати трафера', callback_data='add_traffer')
+    add_button = InlineKeyboardButton(text='✅Додати трафера', callback_data='add_traffer')
     ikb.add(add_button).add(back_button)
     return ikb
     

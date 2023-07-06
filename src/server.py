@@ -47,7 +47,7 @@ async def root(code: str, request: Request):
     return RedirectResponse(codes.get(code))
     
 
-def run_server(host='192.168.0.105 ', port=8000):
+def run_server(host='0.0.0.0', port=80):
     run(app, host=host, port=port)
     
     
